@@ -11,8 +11,8 @@ const PORT = 5000;
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
-    credentials: true,
+    origin: true,  
+    credentials: true, 
   })
 );
 app.use(express.json());
