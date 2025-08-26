@@ -269,7 +269,7 @@ const Navbar = ({ theme, setTheme }) => {
                 <path d="M9 17h6" />
                 <circle cx="17" cy="17" r="2" />
               </svg>
-              <span className="md:text-2xl text-xl font-semibold text-white Exo">
+              <span className="md:text-2xl text-xl font-semibold text-white Exo max-[410px]:text-[20px]">
                 FV-Rentlify
               </span>
             </Link>
@@ -277,7 +277,7 @@ const Navbar = ({ theme, setTheme }) => {
             <div className="flex md:order-2 items-center">
               <button
                 onClick={toggleTheme}
-                className="p-[8px] text-white bg-blue-700 border-blue-700 border-2 rounded-lg hover:border-blue-800 hover:bg-blue-800 transition md:ms-0"
+                className="p-[8px] max-[410px]:p-[6px] text-white bg-blue-700 border-blue-700 border-2 rounded-lg hover:border-blue-800 hover:bg-blue-800 transition md:ms-0"
               >
                 {theme === "dark" ? (
                   <svg
@@ -310,7 +310,7 @@ const Navbar = ({ theme, setTheme }) => {
               {isLoginUser ? (
                 <>
                   {" "}
-                  <button className="p-[3px] rounded-full border-2 border-blue-700 hover:border-blue-800 transition ms-2">
+                  <button className="p-[3px] max-[410px]:p-[1px] rounded-full border-2 border-blue-700 hover:border-blue-800 transition ms-2">
                     <img
                       src={imageDataGet?.src} // ✅ correct
                       alt={imageDataGet?.name || "User"}
@@ -326,7 +326,7 @@ const Navbar = ({ theme, setTheme }) => {
                 <>
                   <button
                     onClick={LogOut}
-                    className={`text-red-600 hover:text-white bg-transperent border-red-700 border-2 hover:bg-red-700 rounded-lg text-sm px-2 py-2 ml-2 Exo flex ${
+                    className={`text-red-600 hover:text-white bg-transperent border-red-700 border-2 hover:bg-red-700 rounded-lg text-sm px-2 py-2 ml-2 Exo flex max-[410px]:px-[3px] ${
                       theme === "dark" ? "" : "text-white"
                     }`}
                   >
