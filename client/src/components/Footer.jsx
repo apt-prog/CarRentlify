@@ -84,7 +84,7 @@ export const Footer = ({ theme }) => {
             ThemeSet === "dark" ? "text-white" : "text-black"
           }`}
         >
-          © 2025{" "}
+          <Link to="/admin">©</Link> 2025{" "}
           <Link to="/" className="hover:underline">
             FV-Rentlify™
           </Link>
