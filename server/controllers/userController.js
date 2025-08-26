@@ -64,14 +64,14 @@ export const userLoginController = async (req, res) => {
     const token = jwt.sign(
       { email: userFind.email },
       process.env.Secret_Key_Encrypted,
-      { expiresIn: "2h" } // Optional but recommended
+      { expiresIn: "2h" }
     );
 
     const cookieOptions = {
       httpOnly: true,
-      secure: false,
+      secure: true,          // ✅ must be true for Render/Vercel (HTTPS)
       maxAge: 2 * 60 * 60 * 1000, // 2 hours
-      sameSite: "lax", // or 'strict' for tighter CSRF protection
+      sameSite: "none",      // ✅ required for cross-site cookies
     };
 
     return res
